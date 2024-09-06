@@ -106,7 +106,7 @@ if(TOML11_PRECOMPILE)
         elseif(MSVC_VERSION LESS 1920) # MSVC 2017
             target_compile_options(toml11 PUBLIC "/experimental:preprocessor")
         else() # MSVC 2019
-            target_compile_options(toml11 PUBLIC "/Zc:preprocessor")
+            # target_compile_options(toml11 PUBLIC "/Zc:preprocessor")
         endif()
     else()
         target_compile_options(toml11 PRIVATE
@@ -141,7 +141,7 @@ else()
         elseif(MSVC_VERSION LESS 1920) # MSVC 2017
             target_compile_options(toml11 INTERFACE "/experimental:preprocessor")
         else() # MSVC 2019
-            target_compile_options(toml11 INTERFACE "/Zc:preprocessor")
+            # target_compile_options(toml11 INTERFACE "/Zc:preprocessor")
         endif()
     endif()
 endif()
